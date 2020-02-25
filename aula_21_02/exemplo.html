@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Regex</title>
+    </head>
+
+    <body>
+        <section>
+            <h2>Form de cadastro</h2>
+            <form onsubmit="preventDefault(event)" method="post" enctype="multipart/form-data">
+
+                <label for="fname">Nome:</label>
+                <input type="text" name="name" id="fname" required pattern="([a-zA-Z]{2,})(\s[a-zA-Z]{2,})+">
+
+                <label for="fphoto">Foto:</label>
+                <input type="file" name="photo" id="fphoto" accept="image/*" required>
+
+                <label for="frg">RG:</label>
+                <input type="text" name="rg" id="frg" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}">
+
+                <label for="flicense-plate">Placa do Veículo:</label>
+                <input type="text" name="license-plate" id="flicense-plate" pattern="[A-Z]{3}-\d{4}">
+
+                <label for="fpassword">Senha:</label>
+                <input type="text" name="password" id="fpassword"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])(?!.*(ab|AB))(?!.*12).{8,}" required>
+
+                <label for="felement">Especifique um elemento HTML:</label>
+                <input type="text" name="element" id="felement" pattern="<([a-z]+\d*)(\s[^\s<>]+)*>.*</\1>" required>
+
+                <button>Submeter</button>
+            </form>
+        </section>
+        <script>
+
+            preventDefault = (e) => {
+                e.preventDefault();
+                alert('Dados enviados:)')
+            } 
+        </script>
+    </body>
+
+</html>

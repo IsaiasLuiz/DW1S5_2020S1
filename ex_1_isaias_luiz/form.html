@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+        <title>Form</title>
+    </head>
+
+    <body>
+        <div>
+            <section class="section-form">
+                <form action="" method="post" class="form">
+
+                    <label for="fname">Nome</label>
+                    <input type="text" name="name" id="fname" required class="large">
+
+                    <label for="fpassword">Senha</label>
+                    <input type="password" name="password" id="fpassword" max="12" required class="large">
+
+                    <label for="fphoto">Foto</label>
+                    <input type="file" name="photo" id="fphoto" accept="image/*">
+
+                    <label for="fbirthday">Semana de Nascimento</label>
+                    <input type="week" name="birthday" id="fbirthday" min="1900-W01" max="2002-W52">
+
+                    <label for="fchildren">Quantidades de filhos</label>
+                    <input type="number" name="children" id="fchildren" min="0" required class="large">
+
+                    <label for="fphone">Telefone Residencial</label>
+                    <input type="number" name="phone" id="fphone" placeholder="(00)0000-00-00" class="large">
+
+                    <label>Deseja Receber Notícias</label>
+                    <label for="newsletter-yes">
+                        <input type="radio" name="newsletter" value="yes" id="newsletter-yes" checked>
+                        Sim
+                    </label>
+
+                    <label for="newsletter-not">
+                        <input type="radio" name="newsletter" value="not">
+                        Não
+                    </label>
+
+
+                    <label>Como ficou sabendo do nosso site</label>
+                    <label for="fsocial-midia">
+                        <input type="checkbox" name="social-media" id="fsocial-midia">
+                        Redes Sociais
+                    </label>
+
+                    <label for="frecommendation">
+                        <input type="checkbox" name="indication" id="frecommendation">
+                        Indicação
+                    </label>
+
+                    <label for="fnews">
+                        <input type="checkbox" name="news" id="fnews">
+                        Jormal
+                    </label>
+
+
+                    <label for="fmail">Email</label>
+                    <input type="email" name="mail" id="fmail" multiple
+                        placeholder="me@example.org, you@example.org, ..." class="large">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Apagar</button>
+                    <a href="./index.html" class="redirect">Página Inicial</a>
+                </form>
+            </section>
+        </div>
+
+    </body>
+
+</html>

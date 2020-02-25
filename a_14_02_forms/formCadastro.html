@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>WebMail</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css" />
+	</head>
+	<body>
+		<section>
+			<h2>Form de cadastro</h2>
+			<form action="resposta.html" method="POST" enctype="multipart/form-data">
+
+					<label>Nome</label>
+					<input type="text" name="nome" id="cnome">
+
+                <label for="cfoto">Envie sua foto</label>
+				<input type="file" name="foto" id="cfoto" accept=".jpg" multiple>
+				
+				<fieldset>
+					<legend>Estado Civil</legend>
+					<input checked value="casado" type="radio" name="civil" id="casado">
+					<label for="casado">Casado </label>
+					
+					<input value="solteiro" type="radio" name="civil" id="solteiro">
+					<label for="solteiro">Solteiro</label>
+
+					<input value="divorciado" type="radio" name="civil" id="divorciado">
+					<label for="divorciado">Divorciado</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Interesses</legend>
+					<input type="checkbox" name="politica" id="politica">
+					<label for="politica">Politica</label>
+
+					<input type="checkbox" name="economia" id="economia">
+					<label for="economia">Economia</label>
+
+					<input type="checkbox" name="esporte" id="esporte">
+					<label for="esporte">Esporte</label>
+				</fieldset>
+
+				<label for="cuf">Escolha o estado: </label>
+				<select name="name" id="cuf">
+					<optgroup label="sudeste">
+						<option>SP</option>
+						<option>MG</option>
+					</optgroup>
+					<optgroup label="sul">
+						<option>RS</option>
+					</optgroup>
+					<optgroup label="nordeste">
+						<option selected >BA</option>
+					</optgroup>					
+				</select>
+
+			<label for="cdescricao" class="descricao">Descreva-e aqui</label>
+			<textarea name="descricao" id="cdescricao" cols="30" rows="10"></textarea>
+
+			<label for="filhos">Quantidade de filhos</label>
+			<input type="number" name="filhos" id="filhos" min="0" max="10" step="1">
+
+			<label for="data">Data de nascimento</label>
+			<input type="datetime-local" name="data" id="data" step="1" min="1900-02-01T08:30:00" max="2000-01-01T11:59:00">
+
+			<label for="cidioma">Idioma</label>
+			<input type="text" name="idioma" id="cidioma" list="idiomas">
+			<datalist id="idiomas">
+				<option>Portugues</option>
+				<option>Espanhol</option>
+				<option>Inglês</option>
+			</datalist>
+
+            <input type="submit" value="Enviar">
+			</form>
+		</section>
+	</body>
+
+</html>
