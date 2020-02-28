@@ -2,16 +2,41 @@
 
 <html lang="pt-BR">
 	<head>
-		<title>Exemplo da propriedade float</title>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Exemplo da propriedade float</title>
+
 		<style>
+
+			* {
+				box-sizing: border-box;
+			}
+
 			div {
 				border: 1px solid #000;
 			}
+
+			p {
+				font-size: 16px;
+				/* Unidades de medida
+					vw: viewport width
+					vh: viewport height
+					vmax: maior entre largura e altura
+					vmin: menor entre largura e altura
+				 */
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
 		</style>
 	</head>
 	<body>
 		<div>
+			<h1>Exemplo de imagem Responsiva</h1>
 			<img src="flores.jpg" alt="Flores" width="460" height="345" />
 			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 			<p>Este texto não deve flutuar</p>
