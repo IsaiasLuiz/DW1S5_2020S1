@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+	<head>
+		<title>Imagem responsiva</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- 
+			vai configurar o view port da página  
+			width para configurar a largura da página
+			inicitial-scale é para a página não aplicar nenhum tipo de zpp,
+			view port é a técnica básica para conseguir a responsibilidade
+		-->
+		<style>
+			img{
+				max-width:100%;
+				/*
+					quando a largura se torna igual ou menor que a largura da página, para não criar a barra de rolagem
+					para alterar a largura da página dinâmicamente
+					
+					min-width: 30%; conforme aumenta o tamanho da tela, a figura ocupa sempre 30%
+				*/
+				height: auto;
+				/*
+					para alterar a altura dinâmicamente
+				*/
+			}			
+			p{
+				font-size: 3vw;
+				/*
+					1% da largura do viewport
+					valores em porcentagem
+					vw = view port width
+					vh = view por height
+					vmax = maior entre altura e largura / sempre pega a porcentagem da maior dimensão 
+					vmin = menor entre altura e largura
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Exemplo de imagem responsiva</h1>
+		<img src="flores.jpg" alt="Flores" width="460" height="345" />
+		<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		</p>
+	</body>
+</html>

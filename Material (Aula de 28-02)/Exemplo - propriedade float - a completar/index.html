@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+	<title>Exemplo da propriedade float</title>
+	<meta charset="UTF-8" />
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		div {
+			border: 2px solid #000;
+		}
+
+		.container {
+			overflow: auto;
+		}
+
+		img {
+			float: left;
+		}
+
+		p {
+			border: 2px solid red;
+			clear: both;
+		}
+
+		.left {
+			border: 2px solid #0f0;
+			float: left;
+			width: 60%;
+		}
+
+		.right {
+			border: 2px solid #00f;
+			float: right;
+			width: 40%;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="left">
+			<img src="flores.jpg" alt="Flores" width="460" height="345" />
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+			dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+			nonummy
+			nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			<p>Este texto não deve flutuar</p>
+		</div>
+
+		<div class="right">
+			<img src="flores.jpg" alt="Flores" width="460" height="345" />
+			Estou a direita
+			<p>Este texto não deve flutuar</p>
+		</div>
+
+	</div>
+	Text Abaixo
+</body>
+
+</html>

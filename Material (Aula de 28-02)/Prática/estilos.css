@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    border: 1px solid #ccc;
+    overflow: auto;
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+@media only screen and (min-width: 501px) {
+    div {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    div {
+        width: 25%;
+    }
+}

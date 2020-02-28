@@ -1,0 +1,87 @@
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin: 10px auto;  
+	font-size: 28px;
+}
+
+thead {
+	background-color: rgb(255,255,204);
+}
+
+tbody {
+	background-color: rgb(255,255,255);
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+td {
+	text-align: center;
+}
+
+.especial{
+	padding: 15px;
+	background-color: #FF0;
+	/*display: none; essa div não será exibida por default*/
+}
+
+/*Completar as media queries aqui*/
+/*
+	media query
+	definem duas coisas
+	primeiro é o midia type
+	screen é desktop, mobile etc
+	only para garantir que os novos navegadores 
+	vão aplicar o media screean
+	midia feature especifica condições
+	(max-width:992px) and 
+(min-width:600px)
+	quando o tamanho for até 992, aplica-se a largura de 100%
+	já quando for menor que 600 ou maior que 992 a largura é de 60%
+	(max-width:992px), (orientation:portrait)	
+	o or é utilizado atráves de virgula
+	aplica-se 100% quando o valor for menor que 992 ou quando estiver em modo retrato
+*/
+/* @media only screen and 
+(min-width:601px){ */
+	/*
+		bloco de regra quando for screen e o tamanhp máximo for de 992px
+	*/
+	/* table{
+		width: 60%;
+	}
+
+	.especial {
+		display: block; 
+	} */
+
+/* } */
+/*
+	Seguindo as boas práticas
+	deve utilizar as media querys para dispositivos maiores
+	por questão de processamento
+*/
+/*
+	a ordem das media querys influencia
+*/
+/* 
+@media only screen and (min-width:1000px){
+	.especial {
+		display: block; 
+	}
+}
+
+@media only screen and (max-width:800px){
+	section h2{
+		color: #0F0;
+	}
+}
+
+@media only screen and (max-width:600px){
+	section h2{
+		color: #F00;
+	}
+} */
