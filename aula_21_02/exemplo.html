@@ -15,24 +15,31 @@
 
                 <label for="fname">Nome:</label>
                 <input type="text" name="name" id="fname" required pattern="([a-zA-Z]{2,})(\s[a-zA-Z]{2,})+">
-
+                
                 <label for="fphoto">Foto:</label>
                 <input type="file" name="photo" id="fphoto" accept="image/*" required>
-
+                
                 <label for="frg">RG:</label>
-                <input type="text" name="rg" id="frg" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}">
-
+                <input type="text" name="rg" id="frg" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}" required>
+                
                 <label for="flicense-plate">Placa do Veículo:</label>
-                <input type="text" name="license-plate" id="flicense-plate" pattern="[A-Z]{3}-\d{4}">
-
+                <input type="text" name="license-plate" id="flicense-plate" pattern="[A-Z]{3}-\d{4}" required>
+                
                 <label for="fpassword">Senha:</label>
                 <input type="text" name="password" id="fpassword"
-                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])(?!.*(ab|AB))(?!.*12).{8,}" required>
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])(?!.*(ab|AB))(?!.*12).{8,}" required>
 
+                <label for="fdescription">Descrição:</label>
+                <textarea name="description" id="fdescription"></textarea>
+                
                 <label for="felement">Especifique um elemento HTML:</label>
                 <input type="text" name="element" id="felement" pattern="<([a-z]+\d*)(\s[^\s<>]+)*>.*</\1>" required>
+                
+                <label for="felement">Especifique uma cor em hexadecimal:</label>
+                <input type="text" name="element" id="felement" pattern="(#[\da-fA-F]{6}|#[\da-fA-F]{3})" required>
 
-                <button>Submeter</button>
+                <button type="submit">Submeter</button>
+                <button type="reset" class="red">Submeter</button>
             </form>
         </section>
         <script>
@@ -41,6 +48,7 @@
                 e.preventDefault();
                 alert('Dados enviados:)')
             } 
+            
         </script>
     </body>
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+	<head>
+		<title>Exercício (21-02)</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="estilos.css" type="text/css" />
+	</head>
+	
+	<body>
+		<section>
+			<h2>Form de cadastro</h2>
+			<form action="teste.html" method="post" enctype="multipart/form-data">
+				<label for="cnome">
+					Nome:
+				</label>
+				<input type="text" name="nome" id="cnome" pattern="[a-zA-Z]{2,}(\s[a-zA-Z]{2,})+" title="Atenção ao padrão exigido" required="required" />
+				
+				<label for="cfoto">
+					Foto:
+				</label>
+				<input type="file" name="foto" id="cfoto" required="required" accept="image/*" />
+
+				<label for="crg">
+					RG:
+				</label>
+				<input type="text" name="rg" id="crg" pattern="\d{2}\.\d{3}\.\d{3}-\d" title="Atenção ao padrão exigido" />
+					
+				<label for="cplaca">
+					Placa:
+				</label>
+				<input type="text" name="placa" id="cplaca" pattern="[A-Z]{3}-\d{4}" title="Atenção ao padrão exigido" />
+				
+				<label for="csenha">
+					Senha:
+				</label>
+				<input type="text" name="senha" id="csenha" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])(?!.*(ab|AB))(?!.*12).{8,}" title="Atenção ao padrão exigido" />
+				
+				<input type="submit" name="botao" value="Submeter" />
+			</form>
+		</section>
+	</body>
+
+</html>
