@@ -1,0 +1,41 @@
+﻿* {  
+box-sizing: border-box;
+}
+
+.container {
+  background-color: #00aaff;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 400px;
+  align-items: flex-start;
+}
+
+/*Melhorar a regra a seguir tornando-a mais específica*/
+.container > div {
+  background-color: #f1f1f1;
+  font-size: 26px;
+  padding: 20px;
+  /* margin: 10px; */
+  /* width: 30%; */
+  border: 1px solid black;
+
+}
+
+#a {
+  /* order: 3; */
+  flex: 30%;
+}
+
+#b {
+  /* order: 1; */
+  flex: 30%;
+  /* align-self:  stretch; propiedade especifica para o align-item do item */
+}
+
+#c {
+  flex: 40%;
+  /* order: 2; */
+}
